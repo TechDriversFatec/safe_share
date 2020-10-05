@@ -4,7 +4,7 @@
 O problema que iremos tratar nesse projeto, é sobre compartilhamento de dados pessoais
 
 ## Objetivo
-Aplicação do artigo 9º, da lei LGBD no Back-end.
+Aplicação do artigo 9º, da lei LGPD no Back-end.
 Com isso iremos trabalhar com:
 - Ofuscar dados pessoais, para que dados de vendas sejam fornecidos de forma estatística, assim não tornando o portador do dado identificável.
 - Criar regra de negócio, para que caso haja uma solicitação de dados pessoais, o titular do dado tenha que ser consultado para autorização.
