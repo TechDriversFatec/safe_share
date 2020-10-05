@@ -1,10 +1,14 @@
 # Projeto Segurança da informação
 
+## Problema
+O problema que iremos tratar nesse projeto, é sobre compartilhamento de dados pessoais
+
 ## Objetivo
-Como a Lei Geral de Proteção de Dados entrou em vigor, no dia 27 de Agosto de 2020, as empresas terão que se adaptar a essa mudança, duas das grandes são: 
-- Relatório de compartilhamento de dados para terceiros,
-- E solicitação da remoção dos dados pelos clientes.
-Sendo assim, a nossa proposta é criar uma ferramenta que possa gerar os relatórios e ofuscação dos dados caso o cliente solicite.
+Aplicação do artigo 9º, da lei LGBD no Back-end.
+Com isso iremos trabalhar com:
+- Ofuscar dados pessoais, para que dados de vendas sejam fornecidos de forma estatística, assim não tornando o portador do dado identificável.
+- Criar regra de negócio, para que caso haja uma solicitação de dados pessoais, o titular do dado tenha que ser consultado para autorização.
+- Criar uma aplicação Front-end, onde o titular do dado tenha acesso direto ao histórico de compartilhamento, saiba a finalidade específica do tratamento, tenha acesso a pessoa responsável pelo controle de dados, e de forma clara consiga autorizar ou negar a utilização deles quando solicitado.
 
 ### Projeto safe_share
 Usaremos como prova de conceito: 
@@ -38,14 +42,13 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 ### Sprint 2
 - Estrutura do Banco de Dados da aplicação.
 - Back-end inicial para simulação de dados.
-- Documentação inicial, contendo aplicações excenciais para atender o artigo 9º da lei LGPD.
 
 ### Sprint 3
-- Implementação inicial atendendo o parágrafo I, II, III, do artigo 9º, da lei LGBD no Back-end.
-- Termino da documentação contendo tudo o que deverá ser implementado na aplicação para atender o artigo 9º, da lei LGBD.
+- Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais.
+- Implementar regra de compartilhamento visando dados estatística (dados sem link com o titular)
 
 ### Sprint 4
-- Implementação atendendo o parágrafo IV, V do artigo 9º, da lei LGBD no Back-end.
+- Implementação de uma regra de negócio, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados.
 
 ### Sprint 5
 - Desenvolvimento do Front-end para a aplicação
@@ -53,3 +56,14 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 ### Sprint 6
 - Criação uma apresentação para o trabalho
+
+## Integrantes da equipe
+- Ariana Rodrigues Cursino
+- Felipe Augusto Carolino
+- Gilherme De Polli Migliano
+- Matheus da Cruz Oliveira dos Santos
+- Rodrigo Marcelino Silva Amorim
+- Rodrigo Querino Ferreira da Costa
+
+
+
