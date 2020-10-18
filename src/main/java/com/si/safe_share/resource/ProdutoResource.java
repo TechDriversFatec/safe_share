@@ -1,52 +1,79 @@
 package com.si.safe_share.resource;
 
+import com.si.safe_share.model.Categoria;
 import com.si.safe_share.model.Produto;
+import com.si.safe_share.repository.CategoriaRepository;
 import com.si.safe_share.repository.ProdutoRepository;
 import com.si.safe_share.resource.form.ProdutoForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value = "/api")
 public class ProdutoResource {
 
     @Autowired
     ProdutoRepository produtoRepository;
 
+    @Autowired
+    CategoriaRepository categoriaRepository;
+
     @PostMapping("/produto")
+    @Transactional
     public Produto salva(@RequestBody ProdutoForm produtoForm) {
-        Produto produto = produtoForm.toModel(produtoForm);
-        return produtoRepository.save(produto);
+        Optional<Categoria> categoriaOpt = categoriaRepository.findById(produtoForm.getCategoria());
+        if(categoriaOpt.isPresent()){
+            Categoria categoria = categoriaOpt.get();
+            Produto produto = Produto.builder()
+                    .descricao(produtoForm.getDescricao())
+                    .categoria(categoria)
+                    .valor(produtoForm.getValor())
+                    .build();
+            Produto produtoNovo = produtoRepository.save(produto);
+            return produtoNovo;
+
+        }
+        return null;
     }
 
     @GetMapping("/produto/{id}")
-    public Optional<Produto> buscaPorId(@PathVariable(value="id") Integer id){
+    public Optional<Produto> buscaPorId(@PathVariable(value = "id") Integer id) {
         return produtoRepository.findById(id);
     }
 
-    @DeleteMapping("/produto/{id}")
-    public void apagaPorId(@PathVariable(value="id") Integer id){
-        Optional<Produto> produto = produtoRepository.findById(id);
-        if (produto.isPresent()){
-            produtoRepository.delete(produto.get());
-        }
-    }
+//    @DeleteMapping("/produto/{id}")
+//    public ResponseEntity<?> apagaPorId(@PathVariable(value = "id") Integer id) {
+//        return produtoRepository.findById(id)
+//                .map(produto -> {
+//                    produtoRepository.deleteById(id);
+//                    return ResponseEntity.ok().build();
+//                }).orElse(ResponseEntity.notFound().build());
+//    }
 
     @PutMapping("/produto/{id}")
-    public Produto atualiza(@PathVariable(value="id") Integer id,
-                            @RequestBody ProdutoForm produtoform){
-        Optional<Produto> produtoAntigoOpt = produtoRepository.findById(id);
-        Produto produtoAntigo = produtoAntigoOpt.get();
-        Produto produtoNovo = produtoform.toModel(produtoform);
-        Produto produtoAtualizado = produtoform.toModelUpdated(produtoAntigo, produtoNovo);
-        return produtoRepository.save(produtoAtualizado);
+    @Transactional
+    public ResponseEntity<Produto> atualiza(@PathVariable Integer id,
+                                            @RequestBody ProdutoForm produtoform) {
+
+        Categoria categoria = categoriaRepository.getOne(produtoform.getCategoria());
+
+        return produtoRepository.findById(id)
+                .map(produto -> {
+                    produto.setCategoria(categoria);
+                    produto.setDescricao(produtoform.getDescricao());
+                    produto.setValor(produtoform.getValor());
+                    Produto atualizado = produtoRepository.save(produto);
+                    return ResponseEntity.ok().body(atualizado);
+                }).orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/produtos")
-    public List<Produto> lista(){
+    public List<Produto> lista() {
         return produtoRepository.findAll();
     }
 }

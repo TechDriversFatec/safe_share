@@ -18,33 +18,29 @@ public class PedidoForm {
     private Integer carrinho;
     private BigDecimal valorTotal;
 
-    @Autowired
-    ClienteRepository clienteRepository;
 
-    @Autowired
-    CarrinhoRepository carrinhoRepository;
 
-    public Pedido toModel(PedidoForm pedidoForm) {
-        Optional<Cliente> clienteEncontradoOpt = clienteRepository.findById(pedidoForm.getCliente());
-        Cliente cliente = clienteEncontradoOpt.get();
-
-        Optional<Carrinho> carrinhoEncontradoOpt = carrinhoRepository.findById(pedidoForm.getCliente());
-        Carrinho carrinho = carrinhoEncontradoOpt.get();
-
-        Pedido pedido = Pedido.builder()
-                .cliente(cliente)
-                .dataDoPedido(LocalDateTime.now())
-                .carrinho(carrinho)
-                .build();
-        return pedido;
-    }
-
-    public Pedido toModelUpdated(Pedido pedidoAntigo, Pedido pedidoNovo) {
-        pedidoAntigo.setCliente(pedidoNovo.getCliente());
-        pedidoAntigo.setCarrinho(pedidoNovo.getCarrinho());
-        pedidoAntigo.setDataDoPedido(LocalDateTime.now());
-        Pedido pedidoAtualizado = pedidoAntigo;
-        return pedidoAtualizado;
-    }
+//    public Pedido toModel(PedidoForm pedidoForm) {
+//        Optional<Cliente> clienteEncontradoOpt = clienteRepository.findById(pedidoForm.getCliente());
+//        Cliente cliente = clienteEncontradoOpt.get();
+//
+//        Optional<Carrinho> carrinhoEncontradoOpt = carrinhoRepository.findById(pedidoForm.getCliente());
+//        Carrinho carrinho = carrinhoEncontradoOpt.get();
+//
+//        Pedido pedido = Pedido.builder()
+//                .cliente(cliente)
+//                .dataDoPedido(LocalDateTime.now())
+//                .carrinho(carrinho)
+//                .build();
+//        return pedido;
+//    }
+//
+//    public Pedido toModelUpdated(Pedido pedidoAntigo, Pedido pedidoNovo) {
+//        pedidoAntigo.setCliente(pedidoNovo.getCliente());
+//        pedidoAntigo.setCarrinho(pedidoNovo.getCarrinho());
+//        pedidoAntigo.setDataDoPedido(LocalDateTime.now());
+//        Pedido pedidoAtualizado = pedidoAntigo;
+//        return pedidoAtualizado;
+//    }
 
 }

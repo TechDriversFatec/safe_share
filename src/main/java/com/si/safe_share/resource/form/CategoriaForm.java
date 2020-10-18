@@ -12,13 +12,13 @@ public class CategoriaForm {
         return categoria;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
     public Categoria toModelUpdated(Categoria categoriaAntiga, Categoria categoriaNova) {
         categoriaAntiga.setDescricao(categoriaNova.getDescricao());
         Categoria categoriaAtualizada = categoriaAntiga;
         return categoriaAtualizada;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }

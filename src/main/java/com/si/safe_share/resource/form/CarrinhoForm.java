@@ -15,20 +15,17 @@ public class CarrinhoForm {
     private Set<Produto> produtos;
     private Integer cliente;
 
-    @Autowired
-    ClienteRepository clienteRepository;
-
-    public Carrinho toModel(CarrinhoForm carrinhoForm) {
-
-        Optional<Cliente> clienteOpt = clienteRepository.findById(carrinhoForm.getCliente());
-        Cliente cliente = clienteOpt.get();
-
-        Carrinho carrinho = Carrinho.builder()
-                .cliente(cliente)
-                .produtos(carrinhoForm.getProdutos())
-                .build();
-        return carrinho;
-    }
+//    public Carrinho toModel(CarrinhoForm carrinhoForm) {
+//
+//        Optional<Cliente> clienteOpt = clienteRepository.findById(carrinhoForm.getCliente());
+//        Cliente cliente = clienteOpt.get();
+//
+//        Carrinho carrinho = Carrinho.builder()
+//                .cliente(cliente)
+//                .produtos(carrinhoForm.getProdutos())
+//                .build();
+//        return carrinho;
+//    }
 
     public Carrinho toModelUpdated(Carrinho carrinhoAntigo, Carrinho carrinhoNovo) {
         carrinhoAntigo.setCliente(carrinhoNovo.getCliente());

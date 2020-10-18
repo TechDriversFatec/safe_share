@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDate;
 import java.util.Optional;
 
-@Getter
 public class LogCompartilhamentoForm {
     private LocalDate dataDeInicio;
     private LocalDate dataFinal;
@@ -27,15 +26,13 @@ public class LogCompartilhamentoForm {
 
     public LogCompartilhamento toModel(LogCompartilhamentoForm logCompartilhamentoForm) {
 
-        Optional<Cliente> clienteOpt = clienteRepository.findById(cliente);
-        Cliente cliente = clienteOpt.get();
 
-        Optional<Empresa> empresaOpt = empresaRepository.findById(empresa);
-        Empresa empresa = empresaOpt.get();
+        Optional<Cliente> cliente = clienteRepository.findById(logCompartilhamentoForm.getCliente());
+        Optional<Empresa> empresa = empresaRepository.findById(logCompartilhamentoForm.getEmpresa());
 
         LogCompartilhamento logCompartilhamento = LogCompartilhamento.builder()
-                .cliente(cliente)
-                .empresa(empresa)
+                .cliente(cliente.get())
+                .empresa(empresa.get())
                 .dataDeInicio(logCompartilhamentoForm.getDataDeInicio())
                 .dataFinal(logCompartilhamentoForm.getDataFinal())
                 .dadoCompartilhado(logCompartilhamentoForm.getDadoCompartilhado())
@@ -43,4 +40,23 @@ public class LogCompartilhamentoForm {
         return logCompartilhamento;
     }
 
+    public LocalDate getDataDeInicio() {
+        return dataDeInicio;
+    }
+
+    public LocalDate getDataFinal() {
+        return dataFinal;
+    }
+
+    public String getDadoCompartilhado() {
+        return dadoCompartilhado;
+    }
+
+    public Integer getCliente() {
+        return cliente;
+    }
+
+    public Integer getEmpresa() {
+        return empresa;
+    }
 }

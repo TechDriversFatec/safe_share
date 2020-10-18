@@ -4,14 +4,15 @@ import com.si.safe_share.model.Cliente;
 import com.si.safe_share.repository.ClienteRepository;
 import com.si.safe_share.resource.form.ClienteForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value = "/api")
 public class ClienteResource {
+
     @Autowired
     ClienteRepository clienteRepository;
 
@@ -22,30 +23,41 @@ public class ClienteResource {
     }
 
     @GetMapping("/cliente/{id}")
-    public Optional<Cliente> buscaPorId(@PathVariable(value="id") Integer id){
-        return clienteRepository.findById(id);
+    public ResponseEntity buscaPorId(@PathVariable Integer id) {
+
+        return clienteRepository.findById(id)
+                .map(cliente -> ResponseEntity.ok().body(cliente))
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/cliente/{id}")
-    public void apagaPorId(@PathVariable(value="id") Integer id){
-        Optional<Cliente> cliente = clienteRepository.findById(id);
-        if (cliente.isPresent()){
-            clienteRepository.delete(cliente.get());
-        }
-    }
+//    @DeleteMapping("/cliente/{id}")
+//    public ResponseEntity<?> apagaPorId(@PathVariable Integer id) {
+//        return clienteRepository.findById(id)
+//                .map(cliente -> {
+//                    clienteRepository.deleteById(id);
+//                    return ResponseEntity.ok().build();
+//                }).orElse(ResponseEntity.notFound().build());
+//    }
 
     @PutMapping("/cliente/{id}")
-    public Cliente atualiza(@PathVariable(value="id") Integer id,
-                              @RequestBody ClienteForm clienteForm){
-        Optional<Cliente> clienteAntigoOpt = clienteRepository.findById(id);
-        Cliente clienteAntigo = clienteAntigoOpt.get();
-        Cliente clienteNovo = clienteForm.toModel(clienteForm);
-        Cliente clienteAtualizado = clienteForm.toModelUpdated(clienteAntigo, clienteNovo);
-        return clienteRepository.save(clienteAtualizado);
+    public ResponseEntity<Cliente> atualiza(@PathVariable(value = "id") Integer id,
+                                            @RequestBody ClienteForm clienteForm) {
+        return clienteRepository.findById(id)
+                .map(cliente -> {
+                    cliente.setNome(clienteForm.getNome());
+                    cliente.setEmail(clienteForm.getEmail());
+                    cliente.setSobrenome(clienteForm.getSobrenome());
+                    cliente.setEndereco(clienteForm.getEndereco());
+                    cliente.setTelefone(clienteForm.getTelefone());
+                    cliente.setCpf(clienteForm.getCpf());
+                    cliente.setSenha(clienteForm.getSenha());
+                    Cliente atualizado = clienteRepository.save(cliente);
+                    return ResponseEntity.ok().body(atualizado);
+                }).orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/clientes")
-    public List<Cliente> lista(){
+    public List<Cliente> lista() {
         return clienteRepository.findAll();
     }
 }

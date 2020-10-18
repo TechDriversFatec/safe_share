@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Builder
 public class LogCompartilhamento {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDate dataDeInicio;
     private LocalDate dataFinal;
