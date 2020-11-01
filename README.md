@@ -36,12 +36,20 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 ### Sprint 1
 - Organização do github.
-- Criação do burndown.
+- Criação do burndown (é uma representação gráfica do trabalho a ser feito versus tempo).
 - Criação do README.md
 
 ### Sprint 2
 - Estrutura do Banco de Dados da aplicação.
+    -   [Modelo](modelo.sql) físico do Banco de dados utilizando o SGBD PostgreSql.
+       
 - Back-end inicial para simulação de dados.
+    - O projeto foi iniciado com Spring Boot, com os módulos de persistência JPA (para persistir objetos Java), Lombok(biblioteca Java focada em produtividade e redução de código). E o compilador Maven. Mais detalhes da configuração inicial do projeto pode ser vista em [Pom](pom.xml).
+    - Diagrama de Classe.
+    - Criação das entidades bem como os endpoints.
+    - Adição do projeto no Swagger (que é um framework para descrição, consumo e visualização de serviços RESTful, bem como a documentação da implementação).
+    - Deploy da [API](https://safe-share-si.herokuapp.com/swagger-ui.html#/).  
+    
 
 ### Sprint 3
 - Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais.
