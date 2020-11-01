@@ -53,10 +53,19 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 ### Sprint 3
 - Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais.
+    - Geração de chaves e códigos de autenticação utilizando o Java Cryptography Extension ou JCE.
 - Implementar regra de compartilhamento visando dados estatística (dados sem link com o titular)
+    - Inserção de alguns [dados](https://github.com/RodrigoMarcelin/safe_share/blob/homologacao/src/main/resources/data.sql) fictícios no Banco de Dados para testes.
+    - Foi criado um [trigger](trigger.sql) no Banco de dados para sempre que o titular modificar o campo se deseja ou não compartilhar os seus dados seja criado um log com data e campo modificado.
+    - Inicializado algumas especificações do front-end.
 
 ### Sprint 4
 - Implementação de uma regra de negócio, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados.
+    - Afim de melhorar o gerenciamento de Log's da aplicação, foi implementado o LoggerFactory, com o intuito de deixar mais consistente sem possibilidade de manipulação dos dados.
+    - Criação de uma tabela para armazenar o id do usuário e a chave gerada aleatóriamente.
+    - Implementação do select.
+    - Funcionalidades do front-end.
+
 
 ### Sprint 5
 - Desenvolvimento do Front-end para a aplicação
