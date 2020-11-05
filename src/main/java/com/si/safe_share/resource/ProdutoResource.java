@@ -46,15 +46,6 @@ public class ProdutoResource {
         return produtoRepository.findById(id);
     }
 
-//    @DeleteMapping("/produto/{id}")
-//    public ResponseEntity<?> apagaPorId(@PathVariable(value = "id") Integer id) {
-//        return produtoRepository.findById(id)
-//                .map(produto -> {
-//                    produtoRepository.deleteById(id);
-//                    return ResponseEntity.ok().build();
-//                }).orElse(ResponseEntity.notFound().build());
-//    }
-
     @PutMapping("/produto/{id}")
     @Transactional
     public ResponseEntity<Produto> atualiza(@PathVariable Integer id,

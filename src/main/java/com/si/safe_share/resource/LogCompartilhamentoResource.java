@@ -46,14 +46,6 @@ public class LogCompartilhamentoResource {
     public Optional<LogCompartilhamento> buscaPorId(@PathVariable(value = "id") Integer id) {
         return logCompartilhamentoRepository.findById(id);
     }
-//
-//    @DeleteMapping("/log-compartilhamento/{id}")
-//    public void apagaPorId(@PathVariable(value = "id") Integer id) {
-//        Optional<LogCompartilhamento> logCompartilhamento = logCompartilhamentoRepository.findById(id);
-//        if (logCompartilhamento.isPresent()) {
-//            logCompartilhamentoRepository.delete(logCompartilhamento.get());
-//        }
-//    }
 
     @PutMapping("/log-compartilhamento/{id}")
     public LogCompartilhamento atualiza(@PathVariable(value = "id") Integer id,

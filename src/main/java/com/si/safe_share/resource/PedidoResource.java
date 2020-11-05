@@ -48,27 +48,6 @@ public class PedidoResource {
         return pedidoRepository.findById(id);
     }
 
-//    @DeleteMapping("/pedido/{id}")
-//    public void apagaPorId(@PathVariable(value = "id") Integer id) {
-//        Optional<Pedido> pedido = pedidoRepository.findById(id);
-//        if (pedido.isPresent()) {
-//            pedidoRepository.delete(pedido.get());
-//        }
-//    }
-
-//    @PutMapping("/pedido/{id}")
-//    public Pedido atualiza(@PathVariable(value = "id") Integer id,
-//                           @RequestBody PedidoForm pedidoForm) {
-//        Optional<Pedido> pedidoAntigoOpt = pedidoRepository.findById(id);
-//        Pedido pedidoAntigo = pedidoAntigoOpt.get();
-//        Pedido pedidoNovo = pedidoForm.toModel(pedidoForm);
-//
-//        Pedido pedidoAtualizado = pedidoForm.toModelUpdated(pedidoAntigo, pedidoNovo);
-//
-//        return pedidoRepository.save(pedidoAtualizado);
-//
-//    }
-
     @GetMapping("/pedidos")
     public List<Pedido> lista() {
         return pedidoRepository.findAll();

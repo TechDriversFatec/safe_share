@@ -27,14 +27,6 @@ public class CategoriaResource {
         return categoriaRepository.findById(id);
     }
 
-//    @DeleteMapping("/categoria/{id}")
-//    public void apagaPorId(@PathVariable(value = "id") Integer id) {
-//        Optional<Categoria> categoria = categoriaRepository.findById(id);
-//        if (categoria.isPresent()) {
-//            categoriaRepository.delete(categoria.get());
-//        }
-//    }
-
     @PutMapping("/categoria/{id}")
     public ResponseEntity<Categoria> atualiza(@PathVariable(value = "id") Integer id,
                                               @RequestBody CategoriaForm categoriaForm) {

@@ -30,15 +30,6 @@ public class ClienteResource {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-//    @DeleteMapping("/cliente/{id}")
-//    public ResponseEntity<?> apagaPorId(@PathVariable Integer id) {
-//        return clienteRepository.findById(id)
-//                .map(cliente -> {
-//                    clienteRepository.deleteById(id);
-//                    return ResponseEntity.ok().build();
-//                }).orElse(ResponseEntity.notFound().build());
-//    }
-
     @PutMapping("/cliente/{id}")
     public ResponseEntity<Cliente> atualiza(@PathVariable(value = "id") Integer id,
                                             @RequestBody ClienteForm clienteForm) {

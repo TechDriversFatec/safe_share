@@ -35,14 +35,6 @@ class EmpresaResource {
         return empresaRepository.findById(id);
     }
 
-//    @DeleteMapping("/empresa/{id}")
-//    public void apagaPorId(@PathVariable(value = "id") Integer id) {
-//        Optional<Empresa> empresa = empresaRepository.findById(id);
-//        if (empresa.isPresent()) {
-//            empresaRepository.delete(empresa.get());
-//        }
-//    }
-
     @PutMapping("/empresa/{id}")
     @Transactional
     public ResponseEntity<Empresa> atualiza(@PathVariable(value = "id") Integer id,
