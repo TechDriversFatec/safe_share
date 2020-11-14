@@ -41,10 +41,10 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 ### Sprint 2
 - Estrutura do Banco de Dados da aplicação.
-    -   [Modelo](modelo.sql) físico do Banco de dados utilizando o SGBD PostgreSql.
+    -   [Modelo](backend/modelo.sql) físico do Banco de dados utilizando o SGBD PostgreSql.
        
 - Back-end inicial para simulação de dados.
-    - O projeto foi iniciado com Spring Boot, com os módulos de persistência JPA (para persistir objetos Java), Lombok(biblioteca Java focada em produtividade e redução de código). E o compilador Maven. Mais detalhes da configuração inicial do projeto pode ser vista em [Pom](pom.xml).
+    - O projeto foi iniciado com Spring Boot, com os módulos de persistência JPA (para persistir objetos Java), Lombok(biblioteca Java focada em produtividade e redução de código). E o compilador Maven. Mais detalhes da configuração inicial do projeto pode ser vista em [Pom](backend/pom.xml).
     - Diagrama de Classe.
     - Criação das entidades bem como os endpoints.
     - Adição do projeto no Swagger (que é um framework para descrição, consumo e visualização de serviços RESTful, bem como a documentação da implementação).
@@ -55,8 +55,8 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 - Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais.
     - Geração de chaves e códigos de autenticação utilizando o Java Cryptography Extension ou JCE.
 - Implementar regra de compartilhamento visando dados estatística (dados sem link com o titular)
-    - Inserção de alguns [dados](https://github.com/RodrigoMarcelin/safe_share/blob/homologacao/src/main/resources/data.sql) fictícios no Banco de Dados para testes.
-    - Foi criado um [trigger](trigger.sql) no Banco de dados para sempre que o titular modificar o campo se deseja ou não compartilhar os seus dados seja criado um log com data e campo modificado.
+    - Inserção de alguns [dados](https://github.com/RodrigoMarcelin/safe_share/blob/homologacao/backend/src/main/resources/data.sql) fictícios no Banco de Dados para testes.
+    - Foi criado um [trigger](backend/trigger.sql) no Banco de dados para sempre que o titular modificar o campo se deseja ou não compartilhar os seus dados seja criado um log com data e campo modificado.
     - Inicializado algumas especificações do front-end.
 
 ### Sprint 4
