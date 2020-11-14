@@ -65,6 +65,7 @@ public class LogCompartilhamentoResource {
         return logCompartilhamentoRepository.save(logCompartilhamentoAtualizado);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/log-compartilhamentos")
     public List<LogCompartilhamento> lista() {
         return logCompartilhamentoRepository.findAll();

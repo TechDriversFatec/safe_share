@@ -140,6 +140,7 @@ public class ConfiguracaoCompartilhamentoResource {
         return configuracaoCompartilhamentoRepository.save(configuracaoCompartilhamento);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/configuracaoCompartilhamento/{id}")
     public Optional<ConfiguracaoCompartilhamento> buscaPorId(@PathVariable(value = "id") Integer id) {
         return configuracaoCompartilhamentoRepository.findById(id);

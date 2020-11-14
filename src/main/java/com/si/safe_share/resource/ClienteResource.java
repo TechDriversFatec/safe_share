@@ -22,6 +22,7 @@ public class ClienteResource {
         return clienteRepository.save(cliente);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/cliente/{id}")
     public ResponseEntity buscaPorId(@PathVariable Integer id) {
 
@@ -30,6 +31,7 @@ public class ClienteResource {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/cliente/{id}")
     public ResponseEntity<Cliente> atualiza(@PathVariable(value = "id") Integer id,
                                             @RequestBody ClienteForm clienteForm) {
@@ -47,6 +49,7 @@ public class ClienteResource {
                 }).orElse(ResponseEntity.notFound().build());
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/clientes")
     public List<Cliente> lista() {
         return clienteRepository.findAll();
