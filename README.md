@@ -68,10 +68,11 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 
 ### Sprint 5
-- Desenvolvimento do Front-end para a aplicação
-- Implementação do Front-end com o Back-end da aplicação
+- Desenvolvimento do [Front-end] para a aplicação
+- Inicio implementação do [Front-end] com o Back-end da aplicação
 
 ### Sprint 6
+- Término da implementação Front-end
 - Criação uma apresentação para o trabalho
 
 ## Integrantes da equipe
@@ -80,7 +81,7 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 - Gilherme De Polli Migliano
 - Matheus da Cruz Oliveira dos Santos
 - Rodrigo Marcelino Silva Amorim
-- Rodrigo Querino Ferreira da Costa
+
 
 
 
