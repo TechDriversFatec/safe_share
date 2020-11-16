@@ -68,7 +68,7 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 
 
 ### Sprint 5
-- Desenvolvimento do [Front-end] para a aplicação
+- Desenvolvimento do [Front-end](https://github.com/RodrigoMarcelin/safe_share/tree/master/frontend) para a aplicação
 - Inicio implementação do [Front-end] com o Back-end da aplicação
 
 ### Sprint 6
