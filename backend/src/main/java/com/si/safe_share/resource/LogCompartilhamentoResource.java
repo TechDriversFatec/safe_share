@@ -42,6 +42,11 @@ public class LogCompartilhamentoResource {
         return logCompartilhamentoRepository.save(logCompartilhamento);
     }
 
+    @GetMapping("/log-cliente/{id}")
+    public  List<LogCompartilhamento> buscaLogPorCliente(@PathVariable(value = "id") Integer id) {
+        return logCompartilhamentoRepository.findByCliente_Id(id);
+    }
+
     @GetMapping("/log-compartilhamento/{id}")
     public Optional<LogCompartilhamento> buscaPorId(@PathVariable(value = "id") Integer id) {
         return logCompartilhamentoRepository.findById(id);
