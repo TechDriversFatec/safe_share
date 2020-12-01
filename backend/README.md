@@ -63,4 +63,4 @@ Abra o IntelliJ e adicione o plugin Lombok para redução de boilerplate
 Para executar a aplicação é necessário criar um banco de dados chamado **safeshare**
 
 ### Implementação Back-end
-![frontend](../images/backend.gif)
+![backend](../images/backend.gif)

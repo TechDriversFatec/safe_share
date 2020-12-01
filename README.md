@@ -95,7 +95,8 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 ### Links
 
 - [Readme Backend](https://github.com/RodrigoMarcelin/safe_share/blob/master/backend/README.md)
-- [Readme Frontend](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/README.md) 
+- [Readme Frontend](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/README.md)
+- [Readme BD](https://github.com/RodrigoMarcelin/safe_share/blob/master/bd/README.md) 
 
 
 
