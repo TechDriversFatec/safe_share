@@ -59,6 +59,8 @@ Abra o IntelliJ e adicione o plugin Lombok para redução de boilerplate
 ### Árvore de diretórios
 ![diretorio](https://github.com/RodrigoMarcelin/safe_share/blob/master/images/diretorio.png)
 
+## Banco de dados
+Para executar a aplicação é necessário criar um banco de dados chamado **safeshare**
+
 ### Implementação Back-end
-## Implementação Front-end 
 ![frontend](../images/backend.gif)

@@ -92,7 +92,10 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 - Término da implementação Front-end :heavy_check_mark:
 - Criação uma apresentação para o trabalho :heavy_check_mark:
 
+### Links
 
+- [Readme Backend](https://github.com/RodrigoMarcelin/safe_share/blob/master/backend/README.md)
+- [Readme Frontend](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/README.md) 
 
 
 
