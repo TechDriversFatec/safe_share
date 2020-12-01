@@ -88,9 +88,9 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 - Desenvolvimento do Frontend :heavy_check_mark:
 - Inicio implementação do Frontend com o Back-end da aplicação :heavy_check_mark:
 
-### Sprint 6
-- Término da implementação Front-end
-- Criação uma apresentação para o trabalho
+### Sprint 6 - [Entrega 6](entrega6.md)
+- Término da implementação Front-end :heavy_check_mark:
+- Criação uma apresentação para o trabalho :heavy_check_mark:
 
 
 
