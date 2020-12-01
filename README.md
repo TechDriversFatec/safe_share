@@ -30,7 +30,7 @@ Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo
 **Para alcançar o objetivo, foram utilizadas as seguintes estruturas:**
 
 
-Dado o contexto acima, desenvolveremos uma aplicação com um CRUD com acesso a Bancos de dados voltada a resolver problemas de anonimização de uma aplicação de vendas online fictícia.
+Dado o contexto acima, desenvolveremos uma aplicação com um CRUD com acesso a Bancos de dados voltada a resolver problemas de anonimização de uma aplicação de vendas online fictícia, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados. 
 
 Para isto contaremos com a seguinte estrutura:
 
@@ -75,20 +75,14 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 ### Sprint 2 - [Entrega2](entrega2.md)
 - Estrutura do Banco de Dados da aplicação. :heavy_check_mark:  
        
-- Back-end inicial para simulação de dados. :heavy_check_mark:    
-    
-    
+- Back-end inicial para simulação de dados. :heavy_check_mark:      
 
 ### Sprint 3 - [Entrega 3](entrega3.md)
 - Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais. :heavy_check_mark:
 - Implementar regra de compartilhamento visando dados estatística (dados sem link com o titular). :heavy_check_mark:
 
-### Sprint 4
+### Sprint 4 - [Entrega 4](entrega4.md)
 - Implementação de uma regra de negócio, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados. :heavy_check_mark:
-    - Afim de melhorar o gerenciamento de Log's da aplicação, foi implementado o LoggerFactory, com o intuito de deixar mais consistente sem possibilidade de manipulação dos dados. :heavy_check_mark:
-    - Criação de uma tabela para armazenar o id do usuário e a chave gerada aleatóriamente. :heavy_check_mark:
-    - Implementação do select. :heavy_check_mark:
-    - Funcionalidades do front-end. :heavy_check_mark:
 
 
 ### Sprint 5
