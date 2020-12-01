@@ -52,8 +52,12 @@ O JCA é uma peça importante da plataforma e contém uma arquitetura de "proved
 3. Extensibilidade do algoritmo: a plataforma Java inclui vários provedores integrados que implementam um conjunto básico de serviços de segurança amplamente usados ​​atualmente.
 
 **Arquitetura dos Provedores**
-![Criptografia](images/crypto.png)
-![Instância](images/crypto_instance.png)
+
+Provedor específico solicitado         |  Descrição de exemplo de como o aplicativo recupera a instância da cifra "AES"
+:-------------------------------------:|:------------------------------:
+![Criptografia](images/crypto.png)     |  ![Instância](images/crypto_instance.png)
+
+
 
 Para o projeto, utilizaremos a criptografia do padrão [AES](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf) (Advanced Encryption System), utilizando uma senha com um tamanho de 256 bits e o método de criptografia em bloco no modelo [CBC](https://csrc.nist.gov/publications/detail/sp/800-38a/final) (Cypher Block Chaining).
 
@@ -75,13 +79,9 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
     
     
 
-### Sprint 3
+### Sprint 3 - [Entrega 3](entrega3.md)
 - Implementação de criptografia de dados, com a finalidade de ofuscar dados pessoais. :heavy_check_mark:
-    - Geração de chaves e códigos de autenticação utilizando o Java Cryptography Extension ou JCE.
 - Implementar regra de compartilhamento visando dados estatística (dados sem link com o titular). :heavy_check_mark:
-    - Inserção de alguns [dados](https://github.com/RodrigoMarcelin/safe_share/blob/homologacao/backend/src/main/resources/data.sql) fictícios no Banco de Dados para testes. :heavy_check_mark:
-    - Foi criado um [trigger](backend/trigger.sql) no Banco de dados para sempre que o titular modificar o campo se deseja ou não compartilhar os seus dados seja criado um log com data e campo modificado. :heavy_check_mark:
-    - Inicializado algumas especificações do front-end. :heavy_check_mark:
 
 ### Sprint 4
 - Implementação de uma regra de negócio, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados. :heavy_check_mark:
