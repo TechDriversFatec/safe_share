@@ -1,7 +1,20 @@
 # Projeto Segurança da informação
 
+## Integrantes da equipe
+- Ariana Rodrigues Cursino [github](https://github.com/arcursino)/[linkedin](https://www.linkedin.com/in/arcursino/) 
+- Felipe Augusto Carolino [github]()/[linkedin]()
+- Gilherme De Polli Migliano [github]( https://github.com/guilhermemigliano)/[linkedin](https://www.linkedin.com/in/guilhermemigliano)
+- Matheus da Cruz Oliveira dos Santos [github](https://github.com/matheuscosantos)/[linkedin](https://www.linkedin.com/in/matheuscosantos/)
+- Rodrigo Marcelino Silva Amorim [github](https://github.com/RodrigoMarcelin)/[linkedin]()
+
+### Projeto safe_share
+Usaremos como prova de conceito: 
+- Criação de banco de dados para uma loja de departamentos.
+- Alteração no banco de dados para atender a geração de relatórios e ofuscação dos dados.
+- Criação de uma interface via API Rest para que o usuário possa fazer o pedido das mudanças.
+
 ## Problema
-O problema que iremos tratar nesse projeto, é sobre compartilhamento de dados pessoais
+O problema que iremos tratar nesse projeto, é sobre compartilhamento de dados pessoais.
 
 ## Objetivo
 Aplicação do artigo 9º, da lei LGPD no Back-end.
@@ -10,29 +23,46 @@ Com isso iremos trabalhar com:
 - Criar regra de negócio, para que caso haja uma solicitação de dados pessoais, o titular do dado tenha que ser consultado para autorização.
 - Criar uma aplicação Front-end, onde o titular do dado tenha acesso direto ao histórico de compartilhamento, saiba a finalidade específica do tratamento, tenha acesso a pessoa responsável pelo controle de dados, e de forma clara consiga autorizar ou negar a utilização deles quando solicitado.
 
-### Projeto safe_share
-Usaremos como prova de conceito: 
-- Criação de banco de dados para uma loja de departamentos.
-- Alteração no banco de dados para atender a geração de relatórios e ofuscação dos dados.
-- Criação de uma interface via API Rest para que o usuário possa fazer o pedido das mudanças.
+Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo [Info.md :book:](/Info.md) 
 
-## O que é LGPD?
-[![](http://img.youtube.com/vi/y7SamL2wYSc/0.jpg)](http://www.youtube.com/watch?v=y7SamL2wYSc "O que é LGPD?")
 
-## Art.9º
-Art. 9º O titular tem direito ao acesso facilitado às informações sobre o tratamento de seus dados, que deverão ser disponibilizadas de forma clara, adequada e ostensiva acerca de, entre outras características previstas em regulamentação para o atendimento do princípio do livre acesso:
+## Desenvolvimento
+**Para alcançar o objetivo, foram utilizadas as seguintes estruturas:**
 
-I - finalidade específica do tratamento;
 
-II - forma e duração do tratamento, observados os segredos comercial e industrial;
+Dado o contexto acima, desenvolveremos uma aplicação com um CRUD com acesso a Bancos de dados voltada a resolver problemas de anonimização de uma aplicação de vendas online fictícia.
 
-III - identificação do controlador;
+Para isto contaremos com a seguinte estrutura:
 
-IV - informações de contato do controlador;
+- Estrutura do Sistema:
 
-V - informações acerca do uso compartilhado de dados pelo controlador e a finalidade;
+![Estrutura](/images/estrutura.png)
 
-## Processo de desenvolvimento
+**Técnicas utilizadas para Criptografar**
+Dada a resolução do problema, decidimos implementar um algoritmo  de criptografia simétrica simples que resolve a questão do armazenamento seguro de informações pessoais de forma anonimizada. Ao se cadastrar no site, para cada usuário é criada uma chave simétrica simples e é armazenada dentro de um banco de dados de chaves criptografadas, separado do banco de dados pessoais.
+
+Para isto utilizaremos a criptografia do padrão [AES](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf) (Advanced Encryption System), utilizando uma senha com um tamanho de 256 bits e o método de criptografia em bloco no modelo [CBC](https://csrc.nist.gov/publications/detail/sp/800-38a/final) (Cypher Block Chaining).
+
+- Arquitetura Criptografia Java - JCA
+
+O JCA é uma peça importante da plataforma e contém uma arquitetura de "provedor" e um conjunto de APIs para assinaturas digitais, resumos de mensagem (hashes), certificados e validação de certificado, criptografia (cifras de bloco / fluxo simétrico / assimétrico), geração de chave e gerenciamento e geração segura de números aleatórios, para citar alguns. Essas APIs permitem que os desenvolvedores integrem facilmente a segurança ao código do aplicativo. A arquitetura foi projetada em torno dos seguintes princípios:
+
+1. Independência de implementação: os aplicativos não precisam implementar algoritmos de segurança. Em vez disso, eles podem solicitar serviços de segurança da plataforma Java. Os serviços de segurança são implementados em provedores, que são conectados à plataforma Java por meio de uma interface padrão. Um aplicativo pode contar com vários provedores independentes para funcionalidade de segurança.
+
+2. Interoperabilidade de implementação: os provedores são interoperáveis ​​entre aplicativos. Especificamente, um aplicativo não está vinculado a um provedor específico e um provedor não está vinculado a um aplicativo específico.
+
+3. Extensibilidade do algoritmo: a plataforma Java inclui vários provedores integrados que implementam um conjunto básico de serviços de segurança amplamente usados ​​atualmente. No entanto, alguns aplicativos podem depender de padrões emergentes ainda não implementados ou de serviços proprietários. 
+
+**Arquitetura dos Provedores**
+![Criptografia](/images/crypto.png)
+![Instância](/images/crypto_instance.png)
+
+
+Para mais especificações da [JCA](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html) 
+
+## Backlog
+
+O Backlog abaixo demonstra os processos que realizaremos para a criação deste projeto:
 
 ### Sprint 1
 - Organização do github.
@@ -75,12 +105,7 @@ V - informações acerca do uso compartilhado de dados pelo controlador e a fina
 - Término da implementação Front-end
 - Criação uma apresentação para o trabalho
 
-## Integrantes da equipe
-- Ariana Rodrigues Cursino
-- Felipe Augusto Carolino
-- Gilherme De Polli Migliano
-- Matheus da Cruz Oliveira dos Santos
-- Rodrigo Marcelino Silva Amorim
+
 
 
 
