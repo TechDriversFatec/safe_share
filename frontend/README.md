@@ -17,4 +17,4 @@ npm start
 ```
 
 ## Implementação Front-end 
-![frontend](images/frontend.gif)
+![frontend](../images/frontend.gif)
