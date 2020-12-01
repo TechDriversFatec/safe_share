@@ -132,3 +132,8 @@ dmypy.json
 HELP.md
 mvnw.cmd
 mvnw
+
+.classpath
+.factorypath
+.project
+.settings/
