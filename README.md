@@ -5,7 +5,7 @@
 - Felipe Augusto Carolino [github](https://github.com/felipecarolino) / [linkedin](https://www.linkedin.com/in/felipe-carolino)
 - Gilherme De Polli Migliano [github]( https://github.com/guilhermemigliano) / [linkedin](https://www.linkedin.com/in/guilhermemigliano)
 - Matheus da Cruz Oliveira dos Santos [github](https://github.com/matheuscosantos) / [linkedin](https://www.linkedin.com/in/matheuscosantos/)
-- Rodrigo Marcelino Silva Amorim [github](https://github.com/RodrigoMarcelin) / [linkedin]()
+- Rodrigo Marcelino Silva Amorim [github](https://github.com/RodrigoMarcelin) / [linkedin](https://www.linkedin.com/in/rodrigo-marcelino-a5578ab8)
 
 ### Projeto safe_share
 Usaremos como prova de conceito: 
@@ -84,10 +84,9 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 ### Sprint 4 - [Entrega 4](entrega4.md)
 - Implementação de uma regra de negócio, onde o compartilhamento de dados pessoais, só aconteça com prévia autorização do titular, isso por solicitação de compartilhamento, deixando claro os fins para tratamento desses dados. :heavy_check_mark:
 
-
-### Sprint 5
-- Desenvolvimento do [Front-end](https://github.com/RodrigoMarcelin/safe_share/tree/master/frontend) para a aplicação :heavy_check_mark:
-- Inicio implementação do [Front-end](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/src/Routes.js) com o Back-end da aplicação :heavy_check_mark:
+### Sprint 5 - [Entrega 5](entrega5.md)
+- Desenvolvimento do Frontend :heavy_check_mark:
+- Inicio implementação do Frontend com o Back-end da aplicação :heavy_check_mark:
 
 ### Sprint 6
 - Término da implementação Front-end
