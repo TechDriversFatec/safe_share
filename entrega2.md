@@ -3,7 +3,7 @@
 O Objetivo dessa Sprint foi:
 
 1. Estrutura do Banco de Dados da aplicação. 
-    * [Modelo](https://github.com/RodrigoMarcelin/safe_share/blob/master/backend/modelo.sql) físico do Banco de dados utilizando o SGBD PostgreSql.
+    * [Modelo](https://github.com/RodrigoMarcelin/safe_share/blob/master/bd/modelo.sql) físico do Banco de dados utilizando o SGBD PostgreSql.
 
 1. Back-end inicial para simulação de dados. 
     * O projeto foi iniciado com Spring Boot, com os módulos de persistência JPA (para persistir objetos Java), Lombok(biblioteca Java focada em produtividade e redução de código). E o compilador Maven. Mais detalhes da configuração inicial do projeto pode ser vista em [Pom](backend/pom.xml).
@@ -15,5 +15,6 @@ O Objetivo dessa Sprint foi:
 
 Todos os passos podem ser reproduzidos localmente, seguindo cada passo a passo abaixo:
 
-[Backend]()
-[Banco de Dados]()
+[Backend](https://github.com/RodrigoMarcelin/safe_share/tree/master/backend)
+
+[Banco de Dados](https://github.com/RodrigoMarcelin/safe_share/tree/master/bd)
