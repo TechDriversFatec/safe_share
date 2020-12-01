@@ -58,3 +58,7 @@ Abra o IntelliJ e adicione o plugin Lombok para redução de boilerplate
 É a camada para exposições das URL's da API.
 ### Árvore de diretórios
 ![diretorio](https://github.com/RodrigoMarcelin/safe_share/blob/master/images/diretorio.png)
+
+### Implementação Back-end
+## Implementação Front-end 
+![frontend](../images/backend.gif)
