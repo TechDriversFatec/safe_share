@@ -23,7 +23,7 @@ Com isso iremos trabalhar com:
 - Criar regra de negócio, para que caso haja uma solicitação de dados pessoais, o titular do dado tenha que ser consultado para autorização.
 - Criar uma aplicação Front-end, onde o titular do dado tenha acesso direto ao histórico de compartilhamento, saiba a finalidade específica do tratamento, tenha acesso a pessoa responsável pelo controle de dados, e de forma clara consiga autorizar ou negar a utilização deles quando solicitado.
 
-Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo [Info.md :book:](/Info.md) 
+Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo [Info.md :book:](Info.md) 
 
 
 ## Desenvolvimento

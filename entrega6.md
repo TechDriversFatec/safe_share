@@ -3,7 +3,9 @@
 **O Objetivo dessa Sprint foi:**
 
 1. Término da implementação Front-end 
-2. Criação de um [vídeo]() para apresentação para o trabalho 
+![frontend](images/frontend.gif)
+
+2. Criação de um [vídeo](https://youtu.be/EUWd7r37p4s) para apresentação para o trabalho 
 
 
 ### **Todos os passos podem ser reproduzidos localmente, seguindo cada passo a passo abaixo:**
