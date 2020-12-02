@@ -90,7 +90,7 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 
 ### Sprint 6 - [Entrega 6](entrega6.md)
 - Término da implementação Front-end :heavy_check_mark:
-- Criação uma apresentação para o trabalho :heavy_check_mark:
+- Criação de uma apresentação para o trabalho :heavy_check_mark:
 
 ### Links
 
