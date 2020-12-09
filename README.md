@@ -63,6 +63,11 @@ Para o projeto, utilizaremos a criptografia do padrão [AES](https://nvlpubs.nis
 
 Para mais especificações da [JCA](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html) 
 
+## Deploy da API
+
+A API pode ser acessada pelo site: https://safe-share-si.herokuapp.com/swagger-ui.html#/
+![deploy](images/deploy.gif)
+
 ## Backlog
 
 O Backlog abaixo demonstra os processos que realizaremos para a criação deste projeto:
