@@ -66,6 +66,7 @@ Para mais especificações da [JCA](https://docs.oracle.com/javase/8/docs/techno
 ## Deploy da API
 
 A API pode ser acessada pelo site: https://safe-share-si.herokuapp.com/swagger-ui.html#/
+
 ![deploy](images/deploy.gif)
 
 ## Backlog

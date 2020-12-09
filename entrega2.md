@@ -10,7 +10,9 @@
     * Diagrama de Classe.
     * Criação das entidades bem como os endpoints.
     * Adição do projeto no Swagger (que é um framework para descrição, consumo e visualização de serviços RESTful, bem como a documentação da implementação).
-    * Deploy da [API](https://safe-share-si.herokuapp.com/swagger-ui.html#/).  
+    * Deploy da API, que pode ser acessada pelo site: https://safe-share-si.herokuapp.com/swagger-ui.html#/
+    
+    ![deploy](images/deploy.gif)  
 
 
 ### **Todos os passos podem ser reproduzidos localmente, seguindo cada passo a passo abaixo:**
