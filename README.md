@@ -7,7 +7,7 @@
 - Matheus da Cruz Oliveira dos Santos [github](https://github.com/matheuscosantos) / [linkedin](https://www.linkedin.com/in/matheuscosantos/)
 - Rodrigo Marcelino Silva Amorim [github](https://github.com/RodrigoMarcelin) / [linkedin](https://www.linkedin.com/in/rodrigo-marcelino-a5578ab8)
 
-A Apresentação final Safe-Share pode ser visto no youtube: https://www.youtube.com/watch?v=EUWd7r37p4s&feature=youtu.be&ab_channel=ARIANACURSINO
+
 
 ### Projeto safe_share
 Usaremos como prova de conceito: 
@@ -105,6 +105,7 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 - [Readme Backend](https://github.com/RodrigoMarcelin/safe_share/blob/master/backend/README.md)
 - [Readme Frontend](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/README.md)
 - [Readme BD](https://github.com/RodrigoMarcelin/safe_share/blob/master/bd/README.md) 
+- A Apresentação final Safe-Share pode ser visto no youtube: https://www.youtube.com/watch?v=EUWd7r37p4s&feature=youtu.be&ab_channel=ARIANACURSINO
 
 
 
