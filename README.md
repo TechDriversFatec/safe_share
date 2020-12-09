@@ -7,6 +7,8 @@
 - Matheus da Cruz Oliveira dos Santos [github](https://github.com/matheuscosantos) / [linkedin](https://www.linkedin.com/in/matheuscosantos/)
 - Rodrigo Marcelino Silva Amorim [github](https://github.com/RodrigoMarcelin) / [linkedin](https://www.linkedin.com/in/rodrigo-marcelino-a5578ab8)
 
+A Apresentação final Safe-Share pode ser visto no youtube: https://www.youtube.com/watch?v=EUWd7r37p4s&feature=youtu.be&ab_channel=ARIANACURSINO
+
 ### Projeto safe_share
 Usaremos como prova de conceito: 
 - Criação de banco de dados para uma loja de departamentos.
