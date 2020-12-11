@@ -5,7 +5,7 @@
 1. Término da implementação Front-end 
 ![frontend](images/frontend.gif)
 
-2. Criação de um [vídeo :arrow_forward:](https://youtu.be/EUWd7r37p4s) para apresentação do trabalho.
+2. Criação de um [vídeo :arrow_forward:](https://youtu.be/mFeVwI7-ROY) para apresentação do trabalho.
 
 
 ### **Todos os passos podem ser reproduzidos localmente, seguindo cada passo a passo abaixo:**
