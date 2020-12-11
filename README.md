@@ -105,7 +105,7 @@ O Backlog abaixo demonstra os processos que realizaremos para a criação deste 
 - [Readme Backend](https://github.com/RodrigoMarcelin/safe_share/blob/master/backend/README.md)
 - [Readme Frontend](https://github.com/RodrigoMarcelin/safe_share/blob/master/frontend/README.md)
 - [Readme BD](https://github.com/RodrigoMarcelin/safe_share/blob/master/bd/README.md) 
-- A Apresentação final do projeto Safe-Share pode ser visto no youtube: https://bit.ly/3oN6Ysb
+- A Apresentação final do projeto Safe-Share na Feira de Soluções da Fatec pode ser visto no youtube: https://youtu.be/mFeVwI7-ROY
 
 
 
